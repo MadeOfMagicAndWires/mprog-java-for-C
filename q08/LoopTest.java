@@ -45,4 +45,4 @@ public class LoopTest {
 	System.out.println();
   }
 }
-//vim:set tabstop=2 shiftwidth-2 expandtab
+//vim:set tabstop=2 shiftwidth=2 expandtab

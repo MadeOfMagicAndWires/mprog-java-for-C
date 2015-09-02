@@ -1,6 +1,5 @@
 ##Java  For  C Programmers Excercises
 
-Verschillende opdrachten van de [Java For C Programmers Tutorial](http://www.davin.50webs.com/research/1999/tsj4cp.html).
+Verschillende opdrachten van de [Java For C Programmers Tutorial](http://www.davin.50webs.com/research/1999/tsj4cp.html) voor [Native App Studio](http://apps.mprog.nl)
 
-Elke opdracht zit in een aparte map genaamd q{1,2,3,4,etc.}
-
+Opdrachten zitten ieder in een aparte map genaamd q{01,02,03,04,etc.}
