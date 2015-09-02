@@ -1,8 +1,8 @@
 /*
- * A very simple class designed to exercise the services of 
+ * A very simple class designed to exercise the services of
  * the SavingsAccount class.  Only simple text output
  * is implemented
- */ 
+ */
 public class SavingsAccountManager {
   // Usual "I'm an application gibberish..."
   public static void main(String args[]) {
@@ -19,7 +19,7 @@ public class SavingsAccountManager {
 	SavingsAccount myLifeSavings = new SavingsAccount();
 
 	// This one uses the supplied constructor to set an initial balance
-	SavingsAccount myHolidaySavings = new SavingsAccount(42);
+	SavingsAccount myHolidaySavings = new SavingsAccount(42, "Holiday Savings");
 
 	// call some methods from one account...
 	myLifeSavings.greet();
@@ -28,7 +28,22 @@ public class SavingsAccountManager {
 	myLifeSavings.showBalance();
 
 	// you do the other...
+  System.out.println();
 	myHolidaySavings.showBalance();
+  myHolidaySavings.withdraw(12);
+  myHolidaySavings.showBalance();
+
+  //Check for depositing/withdrawing negative and zero amounts
+  System.out.println();
+  myHolidaySavings.deposit(-10);
+  myHolidaySavings.withdraw(0);
+
+  //Q10 Test transfer();
+  System.out.println();
+  myHolidaySavings.transfer(100, myLifeSavings);
+  myLifeSavings.transfer(65, myHolidaySavings);
+  //myLifeSavings.transfer(999, null);
+
   }
 }
-//vim:set tabstop=2 shiftwidth=2 expandtab
+//vim: set tabstop=2 shiftwidth=2 expandtab:

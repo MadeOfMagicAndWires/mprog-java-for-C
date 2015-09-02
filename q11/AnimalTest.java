@@ -67,7 +67,7 @@ class AnimalTest {
 	System.out.println(b.canFly);
 	System.out.println(b.numberOfKills);
 	b.talk();
-	b.attack(); 
+  b.attack();
 
 	Eagle e = new Eagle();
 	System.out.println(e.numberOfKills);
@@ -78,4 +78,4 @@ class AnimalTest {
 
   }
 }
-//vim:set tabstop=2 shiftwidth=2 expandtab
+//vim: set tabstop=2 shiftwidth=2 expandtab:

@@ -13,7 +13,7 @@ public class LoopTest {
 	int counter = n;
 	int result  = 1;
 	while (counter != 0) {
-	  result = 2 * result;
+    result = 2 * result;
 	  counter--;
 	}
 	return result;
@@ -22,8 +22,8 @@ public class LoopTest {
 	int counter = n;
 	int result  = 1;
 	do {
-	  result = 2 * result;
-	  counter--;
+    result = 2 * result;
+    counter--;
 	} while (counter != 0);
 	return result;
   }
@@ -31,7 +31,7 @@ public class LoopTest {
 	int counter;
 	int result;
 	for (counter = n, result = 1; counter != 0; counter--) {
-	  result = 2 * result;
+    result = 2 * result;
 	}
 	return result;
   }
@@ -40,9 +40,9 @@ public class LoopTest {
    */
   public void printLineC(int length) {
 	for (int i=0; i<length; i++) {
-	  System.out.print("#");
+    System.out.print("#");
 	}
 	System.out.println();
   }
 }
-//vim:set tabstop=2 shiftwidth=2 expandtab
+//vim:set tabstop=2 shiftwidth=2 expandtab:

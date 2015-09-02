@@ -43,11 +43,11 @@ class BarneyRubble {
   }
 }
 
-class CartoonTest { 
+class CartoonTest {
 
   // The main method is the point of entry into the program...
   public static void main(String[] args) {
   }
 }
 
-//vim:set tabstop=2 shiftwidth=2 expandtab
+//vim: set tabstop=2 shiftwidth=2 expandtab:

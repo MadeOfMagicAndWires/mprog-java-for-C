@@ -25,7 +25,7 @@ public class Iffy {
    */
   public void resetIfNegative() {
 	if(anIntProp < 0)
-	  System.out.println("Caution - negative value given (" + anIntProp + ")");
+    System.out.println("Caution - negative value given (" + anIntProp + ")");
 	anIntProp = 0;
   }
 
@@ -44,4 +44,4 @@ public class Iffy {
   //  what goes here?
   //}
 }
-//vim:set tabstop=2 shiftwidth=2 expandtab
+//vim: set tabstop=2 shiftwidth=2 expandtab:

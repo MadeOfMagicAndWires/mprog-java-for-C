@@ -19,12 +19,12 @@
 /* useful Java-like abbreviation for "char *" */
 typedef char * String;
 
-/* 
+/*
  *
  * Define what a Person is:
- * Each person includes a 
+ * Each person includes a
  * char * name = a person's name,
- * and 
+ * and
  * int     age = a person's age
 */
 
@@ -48,12 +48,12 @@ void talk(PersonPtr p);
  * Makes a comment about a person's age if the person's age
  * if that person is of the age 5 or under.
  * Requires an initialized Person* p as argument
- */ 
+ */
 void commentAboutAge(PersonPtr p);
 
 /*
  * Function to initialize a Person to contain values
- * 
+ *
  * Takes the following arguments
  * char * aName = String of the name of the Person
  * int    anAge = int of the person's age
@@ -62,4 +62,4 @@ void commentAboutAge(PersonPtr p);
  */
 PersonPtr make_person(String aName, int anAge);
 
-//vim:set tabstop=2 shiftwidth=2 expandtab
+//vim: set tabstop=2 shiftwidth=2 expandtab:

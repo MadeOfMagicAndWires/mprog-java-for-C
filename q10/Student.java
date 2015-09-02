@@ -1,12 +1,12 @@
 /* Need to import java.io package to use the BufferedReader and
-   InputStreamReader. 
+   InputStreamReader.
    */
 import java.io.*;
 
 public class Student {
 
   private static BufferedReader stdIn = new BufferedReader(new
-	  InputStreamReader(System.in));
+    InputStreamReader(System.in));
 
   private String name;
   private int age;
@@ -36,4 +36,4 @@ public class Student {
 
 
 
-//vim:set tabstop=2 shiftwidth=2 expandtab
+//vim: set tabstop=2 shiftwidth=2 expandtab:

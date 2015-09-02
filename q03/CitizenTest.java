@@ -55,9 +55,9 @@ class Citizen {
 	/* Returns a Citizen's information in form of a String */
 		String info =  name + "'s salary is: " + salary +"\n" +
                    "They have " + savings + " in savings";
-									 
+
 		if(loan > 0) { info = info + ",\nand " + loan + " in loans.\n";}
-		
+
 		return info;
 	}
 }
@@ -83,12 +83,12 @@ class CitizenTest {
 
 	System.out.println();
 	//Q5: Print Bert's information to stdout using toString()
- 	System.out.println(b.toString());	
+    System.out.println(b.toString());
 
 	//Q6: Create a new Cititzen "Fred" using a second constructor
 	Citizen f = new Citizen("Fred");
 	System.out.println(f.toString());
-	
+
 	}
 }
-//vim: set tabstop=2 shiftwidth=2 expandtab
+//vim: set tabstop=2 shiftwidth=2 expandtab:

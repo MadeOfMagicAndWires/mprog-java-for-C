@@ -12,16 +12,16 @@ class ArrayTest {
 
 	// sets the values of the fred array
 	for (int i=0; i<10; i++) {
-	  fred[i] = i;
+    fred[i] = i;
 	}
 
 	// prints the values of the fred array
 	for (int i=0; i<10; i++) {
-	  System.out.println(fred[i]);
+    System.out.println(fred[i]);
 	}
 
 	// insert your code for the nums array here:
 
   }
 }
-//vim:set tabstop=2 shiftwidth=2 expandtab
+//vim: set tabstop=2 shiftwidth=2 expandtab:

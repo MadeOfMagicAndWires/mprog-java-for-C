@@ -21,8 +21,8 @@ class XWing {
   public void hit(int damage) {
 	shields = shields - damage;
 	if (shields < 0) {
-	  System.out.println("BOOM!!!");
-	  dead = true;
+    System.out.println("BOOM!!!");
+    dead = true;
 	}
   }
 }
@@ -48,11 +48,11 @@ class Tie {
 	return dead;
   }
   public void hit(int damage) {
-	shields = shields - damage;
-	if (shields < 0) {
-	  System.out.println("BOOM!!!");
-	  dead = true;
-	}
+    shields = shields - damage;
+    if (shields < 0) {
+      System.out.println("BOOM!!!");
+      dead = true;
+    }
   }
 }
 
@@ -60,18 +60,18 @@ class StarWars {
 
   private void duel(XWing x, Tie t) {
 
-	for (;;) {
-	  x.hit(t.getWeapon());       
-	  if (x.isDead()) {
-		System.out.println("X-Wing is dead");
-		break;
-	  }
-	  t.hit(x.getWeapon());
-	  if (t.isDead()) {
-		System.out.println("Tie fighter is dead");
-		break;
-	  }
-	}
+    for (;;) {
+      x.hit(t.getWeapon());
+      if (x.isDead()) {
+        System.out.println("X-Wing is dead");
+        break;
+      }
+    t.hit(x.getWeapon());
+    if (t.isDead()) {
+      System.out.println("Tie fighter is dead");
+      break;
+    }
+  }
 
   }
 
@@ -83,16 +83,17 @@ class StarWars {
 	int evilDeaths = 0;
 
 	while (g < good.length && e < evil.length) {
-	  System.out.println("battling X-Wing #" + g + " versus Tie Fighter #" + e);
-	  duel(good[g],evil[e]);
-	  if (good[g].isDead()) {
-		g++;
-		goodDeaths++;
-	  }
-	  if (evil[e].isDead()) {
-		e++;
-		evilDeaths++;
-	  }
+    System.out.println("battling X-Wing #" + g + " versus Tie Fighter #" + e);
+    duel(good[g],evil[e]);
+    if (good[g].isDead()) {
+      g++;
+      goodDeaths++;
+    }
+
+    if (evil[e].isDead()) {
+      e++;
+      evilDeaths++;
+    }
 	}
 
 	int finalGood = good.length - goodDeaths;
@@ -109,10 +110,10 @@ class StarWars {
 	System.out.println("Final ships:\t\t"   + finalGood   + "\t\t" + finalEvil);
 	System.out.println();
 	if (finalGood > finalEvil) {
-	  System.out.println("The rebel alliance is victorious!");
+    System.out.println("The rebel alliance is victorious!");
 	}
 	else {
-	  System.out.println("The dark side has conquered!");
+    System.out.println("The dark side has conquered!");
 	}
 	System.out.println();
   }
@@ -124,7 +125,7 @@ class StarWars {
 
 	// initialises the elements of the goodies array
 	for (int i=0; i<goodies.length; i++) {
-	  goodies[i] = new XWing();
+    goodies[i] = new XWing();
 	}
 
 	// defines the baddies array
@@ -132,12 +133,12 @@ class StarWars {
 
 	// initialises the elements of the baddies array
 	for (int i=0; i<baddies.length; i++) {
-	  baddies[i] = new Tie();
+    baddies[i] = new Tie();
 	}
 
 	battle(goodies,baddies);
 
-  }  
+  }
 
   // The main method is the point of entry into the program...
   public static void main(String[] args) {
@@ -147,4 +148,4 @@ class StarWars {
 
 }
 
-//vim:set tabstop=2 shiftwidth=2 expandtab
+//vim: set tabstop=2 shiftwidth=2 expandtab:
