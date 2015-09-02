@@ -35,3 +35,4 @@ class CitizenTest {
       System.out.println("Ernie's salary is: " + e.getSalary());
    }
 }
+//vim:set tabstop=2 shiftwidth-2 expandtab
