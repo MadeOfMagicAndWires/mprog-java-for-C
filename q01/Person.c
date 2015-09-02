@@ -14,30 +14,35 @@
 
 #include "Person.h"
 
+/*
+ * main() Function to reproduce PersonTest()
+ * Create two Persons, initialize them and have them
+ * talk and comment about their age.
+ */
 int main()
 {
+	//empty PersonPtrs
     PersonPtr ls = NULL;
     PersonPtr ss = NULL;
 
+	//Initialize their values.
     ls = make_person("Luke Skywalker", 34);
-    if(!ls) 
-	{  
-      fprintf(stderr, "\033[0;31mIt appears something has gone wrong!\n");
-      return 1;
-    }
     ss = make_person("Slim Shady", 48);
-    if (!ss)
+    
+	//Test for errors
+	if (!ss || !ls)
 	{  
       fprintf(stderr, "\033[0;31mIt appears something has gone wrong!\n");
       return 1;
     }
     
+	//talk and comment about their age.
 	talk(ls);   
+	commentAboutAge(ls);
     talk(ss);
-
-    commentAboutAge(ls);
     commentAboutAge(ss);
 
+	//Free people from their bondage.
     free(ls);
     free(ss);
 
@@ -63,8 +68,6 @@ void talk(PersonPtr p)
  */ 
 void commentAboutAge(PersonPtr p)
 {
-    //print age for clarity
-    fprintf(stdout, "age: %d \n", p->age);
     //check if person is of the age 5 or under,
     //if so comment about it.
     if (p->age < 5)
@@ -73,6 +76,8 @@ void commentAboutAge(PersonPtr p)
         fprintf(stdout, "Time to start school! \n");
     else
         fprintf(stdout, "... \n");
+	
+	fprintf(stdout, "\n");
 }
 
 /*
