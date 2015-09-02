@@ -16,22 +16,32 @@
 
 int main()
 {
-	PersonPtr lw = NULL;
-	PersonPtr ss = NULL;
+    PersonPtr ls = NULL;
+    PersonPtr ss = NULL;
 
-	lw = make_person("Luke Skywalker", 34);
-	ss = make_person("Slim Shady", 48);
+    ls = make_person("Luke Skywalker", 34);
+    if(!ls) 
+	{  
+      fprintf(stderr, "\033[0;31mIt appears something has gone wrong!\n");
+      return 1;
+    }
+    ss = make_person("Slim Shady", 48);
+    if (!ss)
+	{  
+      fprintf(stderr, "\033[0;31mIt appears something has gone wrong!\n");
+      return 1;
+    }
+    
+	talk(ls);   
+    talk(ss);
 
-	talk(lw);	
-	talk(ss);
+    commentAboutAge(ls);
+    commentAboutAge(ss);
 
-	commentAboutAge(lw);
-	commentAboutAge(ss);
+    free(ls);
+    free(ss);
 
-	free(lw);
-	free(ss);
-
-	return 0;
+    return 0;
 
 }
 
@@ -41,9 +51,9 @@ int main()
  */
 void talk(PersonPtr p)
 {
-	fprintf(stdout, "Hi my name is %s \n", p->name);
-	fprintf(stdout, "and my age is %d \n", p->age);
-	fprintf(stdout, "\n");
+    fprintf(stdout, "Hi my name is %s \n", p->name);
+    fprintf(stdout, "and my age is %d \n", p->age);
+    fprintf(stdout, "\n");
 }
 
 /*
@@ -53,16 +63,16 @@ void talk(PersonPtr p)
  */ 
 void commentAboutAge(PersonPtr p)
 {
-	//print age for clarity
-	fprintf(stdout, "age: %d \n", p->age);
-	//check if person is of the age 5 or under,
-	//if so comment about it.
-	if (p->age < 5)
-		fprintf(stdout, "little babby \n");
-	else if (p->age == 5)
-		fprintf(stdout, "Time to start school! \n");
-	else
-		fprintf(stdout, "... \n");
+    //print age for clarity
+    fprintf(stdout, "age: %d \n", p->age);
+    //check if person is of the age 5 or under,
+    //if so comment about it.
+    if (p->age < 5)
+        fprintf(stdout, "little babby \n");
+    else if (p->age == 5)
+        fprintf(stdout, "Time to start school! \n");
+    else
+        fprintf(stdout, "... \n");
 }
 
 /*
@@ -76,21 +86,22 @@ void commentAboutAge(PersonPtr p)
  */
 PersonPtr make_person(String aName, int anAge)
 {
-	PersonPtr person = NULL;
+    PersonPtr person = NULL;
 
-	//If the Person is not yet initialized, require memory
-	if(!person)
-		person = malloc(sizeof(Person));
-	
-	//Still not initialized? Then we have a problem
-	if(!person)
-		fprintf(stderr, "Halp, I don't have any memory to work with!");
-	
-	//Initialize the person's values 
-	person->name = aName;
-	person->age  = anAge;
+    //If the Person is not yet initialized, require memory
+    if(!person)
+        person = malloc(sizeof(Person));
+    
+    //Still not initialized? Then we have a problem
+    if(!person)
+        fprintf(stderr, \
+		"\033[0;31mHalp, I don't have any memory to work with!");
+    
+    //Initialize the person's values 
+    person->name = aName;
+    person->age  = anAge;
 
-	return person;
+    return person;
 };
 
-//vim: set ts=2 sw=2 et 
+//vim:set tabstop=2 shiftwidth=2 expandtab 
