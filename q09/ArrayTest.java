@@ -47,7 +47,7 @@ class ArrayTest {
   }
 
   //1f) create own printArray method()
-  static public void printArray(double[] array) {
+  public static void printArray(double[] array) {
   /**
    * Print out each member of an array of doubles
    * @param array an array of doubles

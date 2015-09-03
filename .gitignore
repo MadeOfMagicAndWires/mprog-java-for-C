@@ -2,3 +2,4 @@
 *.class
 q01/Person
 !q09/ArrayPrint.class
+!q10/BadRandom.class

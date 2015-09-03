@@ -46,7 +46,7 @@ class ArrayTest2 {
   }
 
   //2e) Create a printArray method for Humans
-  static public void printArray(Human[] array) {
+  public static void printArray(Human[] array) {
   /**
    * Print out each item from an array of Humans
    * @param array an array of Human Objects
