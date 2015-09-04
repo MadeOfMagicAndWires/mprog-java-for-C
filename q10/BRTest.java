@@ -15,12 +15,12 @@ public class BRTest {
 //2d) add int[] excepCounts and
   //add constants for all exceptions,
   //linking them to an array index.
-  private static final int ARITHMETIC    = 0;
+  private static final int ARITHMETIC     = 0;
   private static final int NULL_POINTER   = 1;
   private static final int ARRAY_INDEX    = 2;
-  private static final int CLASS         = 3;
+  private static final int CLASS          = 3;
   private static final int NEGATIVE_ARRAY = 4;
-  private static final int OTHER         = 5;
+  private static final int OTHER          = 5;
   private int[] excepCalls;
 
   /**
@@ -116,24 +116,22 @@ public class BRTest {
       String errorName;
       switch (i) {
         case ARITHMETIC:
-          errorName = "Arithmetic Exceptions: ";
+          errorName = "Arithmetic Exceptions:     ";
           break;
         case NULL_POINTER:
-          errorName = "Null Pointer Exceptions: ";
+          errorName = "Null Pointer Exceptions:   ";
           break;
         case ARRAY_INDEX:
-          errorName = "Array Index Exceptions: ";
+          errorName = "Array Index Exceptions:    ";
           break;
         case CLASS:
-          errorName = "Class Cast Exceptions: ";
+          errorName = "Class Cast Exceptions:     ";
           break;
         case NEGATIVE_ARRAY:
           errorName = "Negative Array Exceptions: ";
           break;
-        case OTHER:
-          errorName = "Other Exceptions: ";
         default:
-          errorName = "Unknown: ";
+          errorName = "Other Exceptions:          ";
           break;
       }
 
